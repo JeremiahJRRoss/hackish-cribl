@@ -170,7 +170,7 @@ def main():
     # Round float metrics to 2 decimal places
     for key in ("dns_resolution_time", "tcp_connect_time", "tls_handshake_time", "time_to_first_byte", "content_download_time"):
         if isinstance(result.get(key), float):
-            result[key] = round(result[key], 3)
+            result[key] = round(result[key], 4)
 
     # Output compact single-line JSON
     print(json.dumps(result, ensure_ascii=False, separators=(',', ':')))
